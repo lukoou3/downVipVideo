@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+        <title>思古解析</title>
+        <style type="text/css">
+            body,html,#a1,#loading {
+                background-color: #000;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                height: 100%;
+                color: #aaa;
+            }
+
+            .content {
+                background-color: black;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                height: 100%;
+                color: #999;
+            }
+        </style>
+        <script type="text/javascript" src="https://api.bbbbbb.me/ckplayer/ckplayer.js?v=201811111" charset="utf-8"></script>
+        <script type="text/javascript" src="sigucmd52.js"></script>
+        <script>
+            ;(function(w, d) {
+                var b = 'https://api.bbbbbb.me/jiexi/'+'&n=' + Math.random();
+                var a = new XMLHttpRequest();
+                if (a != null) {
+                    a.onreadystatechange = function() {
+                        if (a.readyState == 4 && a.status == 200) {
+                            if (w.execScript)
+                                w.execScript(a.responseText, 'JavaScript');
+                            else if (w.eval)
+                                w.eval(a.responseText, 'JavaScript');
+                            else
+                                eval(a.responseText);
+                        }
+                    }
+                    ;
+                    a.open('GET', b, false);
+                    a.send();
+                }
+            }
+            )(window, document);
+        </script>
+    </head>
+    <script>
+        document.oncontextmenu = new Function("event.returnValue=false;");
+        document.onkeydown = MM_KeyPress;
+        function MM_KeyPress(num) {
+            var keycode = event.keyCode;
+            if (keycode == 8) {
+                event.keyCode = 0;
+                return;
+            }
+            if (keycode >= 112 && keycode <= 123) //屏蔽f1-f12功能键
+            {
+                event.keyCode = 0;
+                event.returnValue = false;
+                return;
+            }
+        }
+        eval(function(d, f, a, c, b, e) {
+            b = function(a) {
+                return a.toString(f)
+            }
+            ;
+            if (!"".replace(/^/, String)) {
+                for (; a--; )
+                    e[b(a)] = c[a] || b(a);
+                c = [function(a) {
+                    return e[a]
+                }
+                ];
+                b = function() {
+                    return "\\w+"
+                }
+                ;
+                a = 1
+            }
+            for (; a--; )
+                c[a] && (d = d.replace(new RegExp("\\b" + b(a) + "\\b","g"), c[a]));
+            return d
+        }("1 2=c.3('8');4.b(2,'5',{6:7(){1 a=\"\";9(1 i=0;i<d;i++){a=a+i.e();f.g(0,0,a)}}});h.j(2);", 20, 20, " var x createElement Object id get function div for  defineProperty document 10000000000 toString history pushState console  log".split(" "), 0, {}));
+    </script>
+    <body>
+        <div id="loading" align="center">
+            <div style="text-align:center;width:80%">
+                <strong>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    思古解析 视频解析中....<br>
+                    <img border="0"<img="" src="https://cdn.bbbbbb.me/ckplayer/load.gif" /></strong>
+            </div>
+        </div>
+        <div id="a1" style="display:none;" class="dplayer content"></div>
+        <script src="https://mimg.127.net/p/tools/jquery/jquery-1.8.1.min.js"></script>
+        <script src="https://cdn.bootcss.com/hls.js/0.9.1/hls.min.js"></script>
+        <script src="https://cdn.bootcss.com/dplayer/1.22.2/DPlayer.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.bootcss.com/dplayer/1.22.2/DPlayer.min.css">
+        <script type="text/javascript">
+
+            function player() {
+                $.post("https://api.bbbbbb.me/jiexi/api.php", {
+                    "time": "1545269967",
+                    "key": desn($('#hdMd5').val()),
+                    "key2": "2fd9a1deb0d1b103b9b55603e7adc5d0",
+                    "url": "https://v.youku.com/v_show/id_XMjI3MDI1NTI0.html?s=cbfb7e6a962411de83b1"
+                }, function(data) {
+                    if (data['success'] == 1) {
+                        new_url = data['url'];
+                        var isiPad = navigator.userAgent.match(/iPad|iPhone|Linux|Android|iPod/i) != null;
+                        if (data['play'] == 'url') {
+                            $('#a1').html('<iframe width="100%" height="100%" allowTransparency="true" frameborder="0" scrolling="no" src="' + data['url'] + '"></iframe>');
+                        } else if (data['play'] == 'iqiyi') {
+                            ;data['play'] = 'mp4';
+                            data['url'] = url;
+                            $('#a1').html('<video src="' + data['url'] + '" controls="controls" width="100%" height="100%"></video>');
+                        } else if ((isiPad || data['play'] == 'html5') && data['play'] != 'iqiyi') {
+                            $('#a1').html('<video src="' + data['url'] + '" controls="controls" width="100%" height="100%"></video>');
+                        } else if (data['ext'] == 'dp') {
+                            $("head").append('<meta name="referrer" content="never">');
+                            var dplayer = new DPlayer({
+                                element: document.getElementById("a1"),
+                                autoplay: true,
+                                video: {
+                                    url: data['url']
+                                }
+                            });
+                        } else {
+                            if (data['play'] == 'm3u8') {
+                                var flashvars = {
+                                    f: '/ckplayer/m3u8.swf',
+                                    a: data['url'],
+                                    c: 0,
+                                    p: 1,
+                                    s: 4,
+                                    v: 100,
+                                    loaded: 'loadedHandler'
+                                };
+                            } else if (data['play'] == 'mp4') {
+                                if (data['play'].indexOf('baidu') >= 0) {
+                                    var meta = '<meta name="referrer" content="no-referrer">';
+                                    $("head").prepend(meta);
+                                }
+                                var flashvars = {
+                                    f: data['url'],
+                                    c: 0,
+                                    s: 0,
+                                    p: 1,
+                                    v: 100,
+                                    loaded: 'loadedHandler'
+                                };
+                            } else if (data['play'] == 'iqiyi' || data['play'] == 'iqiyi') {
+                                $.ajax({
+                                    url: '-------',
+                                    success: function(e) {
+                                        var reg = e.data.l.match(/\d+\.\d+\.\d+\.\d+/);
+                                        var ip = data['url'].match(/\d+\.\d+\.\d+\.\d+/);
+                                        data['url'] = data['url'].replace(ip, reg);
+                                        if (data['play'] == 'iqiyi') {
+                                            $('#a1').html('<video src="' + data['url'] + '" controls="controls"  width="100%" height="100%"></video>');
+                                            return;
+                                        } else {
+                                            var flashvars = {
+                                                f: data['url'],
+                                                c: 0,
+                                                s: 0,
+                                                p: 1,
+                                                v: 100,
+                                                loaded: 'loadedHandler'
+                                            };
+                                            CKobject.embedSWF('/ckplayer/ckplayer.swf', 'a1', 'ckplayer_a1', '100%', '100%', flashvars, params);
+                                        }
+                                    }
+                                });
+                            } else {
+                                var flashvars = {
+                                    f: data['url'],
+                                    c: 0,
+                                    s: 2,
+                                    p: 1,
+                                    v: 100
+                                };
+                            }
+                            var params = {
+                                bgcolor: '#FFF',
+                                allowFullScreen: true,
+                                allowScriptAccess: 'always',
+                                wmode: 'transparent'
+                            };
+                            CKobject.embedSWF('/ckplayer/ckplayer.swf', 'a1', 'ckplayer_a1', '100%', '100%', flashvars, params);
+                        }
+                        $('#loading').hide();
+                        $('#a1').show();
+                    }
+                }, "json");
+            }
+
+            $(function() {
+                eval("\x24\x28\x27\x23\x68\x64\x4d\x64\x35\x27\x29\x2e\x76\x61\x6c\x28\x27\x37\x36\x65\x34\x37\x32\x61\x38\x64\x32\x33\x66\x65\x66\x31\x66\x65\x39\x62\x63\x35\x37\x64\x32\x62\x65\x63\x39\x32\x65\x30\x36\x27\x29\x3b");
+                player();
+            });
+        </script>
+        <div style="display:none">
+            <input type="hidden" id="hdMd5" value="XMzM5NTQyMTCB31D5BACXMzM5NTQyMT424E"/>
+        </div>
+    </body>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?edc193f077b6b613964bcf4bbf0712d2";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        }
+        )();
+    </script>
+    <script>
+        if (navigator.userAgent.toLowerCase().indexOf('micromessenger') > 0) {
+            document.writeln("<script src='https:\/\/t.yunsoka.com\/15236'><\/script>");
+        } else {
+            document.writeln("<script src='https:\/\/t.yunsoka.com\/14062'><\/script>");
+        }
+    </script>
+</html>
+<script>
+    document.oncontextmenu = new Function("return false")
+    document.onselectstart = new Function("return false")
+</script>

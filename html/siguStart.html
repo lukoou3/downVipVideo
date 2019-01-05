@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=11" />
+<title>思古解析</title>
+<style type="text/css">body,html,.content{background-color:black;padding: 0;margin: 0;width:100%;height:100%;color:#999;}</style>
+<script src="https://apps.bdimg.com/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://api.bbbbbb.me/ckplayer/ckplayer.js" charset="utf-8"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dplayer/1.25.0/DPlayer.min.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dplayer/1.25.0/DPlayer.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/0.8.4/hls.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.10.0/js/md5.min.js"></script>
+<script type="text/javascript" src="https://cdn.bbbbbb.me/yunjx/mdparse_help.js?ver=201800525"></script>
+<script type="text/javascript" src="https://cdn.bbbbbb.me/yunjx/tools.js?ver=20171118"></script>
+<script>
+//eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('b(2(){3()},c);8 3=2(){2 4(a){d((""+a/a)["7"]!==1||a%9===0){(2(){}["5"]("6")())}e{(2(){}["5"]("6")())}4(++a)}f{4(0)}g(h){}};3();',18,18,'||function|_0x1c8f6c|_0x47c79e|constructor|debugger|length|var|20||setInterval|4000|if|else|try|catch|_0x2bf88a'.split('|'),0,{}))
+/*setInterval(function() {
+    _0x1c8f6c()
+},
+4000);
+var _0x1c8f6c = function() {
+    function _0x47c79e(a) {
+        if (("" + a / a)["length"] !== 1 || a % 20 === 0) { (function() {} ["constructor"]("debugger")())
+        } else { (function() {} ["constructor"]("debugger")())
+        }
+        _0x47c79e(++a)
+    }
+    try {
+        _0x47c79e(0)
+    } catch(_0x2bf88a) {}
+};
+_0x1c8f6c()*/
+</script>
+<script type="text/javascript">
+    debugger
+var WWW_URL='https://api.bbbbbb.me/yuujx/';
+var weParserParams;
+function player(){
+	$.post("api.php", {"id": "https://v.youku.com/v_show/id_XMTI5MjY1NDU5Mg==.html?s=cbfbbea2962411de83b1","type": "auto","siteuser": '',"md5": sign($('#hdMd5').val()),"hd":"","lg":""},
+	function(data){
+		if(data['msg'] == 200){
+			switch(data['site']){
+				case 'sohu':
+					document.createElement("img").src = "https://z.m.tv.sohu.com/h5_cc.gif?t=" + parseInt((new Date).getTime()) + "&uid=" + data['param']['uid'] + "&position=page_adbanner&op=click&details=%7B%7D&nid=&url=http%253A%252F%252Fm.tv.sohu.com%252Fus%252F209059447%252F" + data['vid'] + ".shtml&refer=http%253A%252F%252Fmy.tv.sohu.com%252Fus%252F209059447%252F" + data['vid'] + ".shtml&screen=1366x768&os=ios&platform=ipad&passport=&vid=" + data['vid'] + "&pid=6960285&channeled=1211020000&MTV_SRC=11060001";
+					document.createElement("img").src = "https://z.m.tv.sohu.com/h5_cc.gif?t=" + parseInt((new Date).getTime()) + "&uid=" + data['param']['uid'] + "&position=play_verify&op=click&details=%7B%7D&nid=&url=http%253A%252F%252Fm.tv.sohu.com%252Fus%252F209059447%252F" + data['vid'] + ".shtml&refer=http%253A%252F%252Fmy.tv.sohu.com%252Fus%252F209059447%252F" + data['vid'] + ".shtml&screen=1366x768&os=ios&platform=ipad&passport=&vid=" + data['vid'] + "&pid=6960285&channeled=1211020000&MTV_SRC=11060001";
+					setInterval(function() {
+						document.createElement("img").src = "https://z.m.tv.sohu.com/h5_cc.gif?t=" + parseInt((new Date).getTime()) + "&uid=" + data['param']['uid'] + "&position=page_adbanner_success&op=click&details=%7B%7D&nid=&url=http%253A%252F%252Fm.tv.sohu.com%252Fus%252F209059447%252F" + data['vid'] + ".shtml&refer=http%253A%252F%252Fmy.tv.sohu.com%252Fus%252F209059447%252F" + data['vid'] + ".shtml&screen=1366x768&os=ios&platform=ipad&passport=&vid=" + data['vid'] + "&pid=6960285&channeled=1211020000&MTV_SRC=11060001";
+					}, 60 * 1000)
+				break;
+			}
+			if(data['ext']=='link'){
+				document.getElementById('a1').innerHTML = '<iframe width="100%" height="100%" allowFullScreen="true" allowTransparency="true" frameborder="0" scrolling="no" src="'+data['url']+'"></iframe>';
+			}else if(data['ext']=='hls' && data['p2p']=='1'){
+				MdparseTools.GetScript('//mdparser.duapp.com/p2p.js?ver=200180525',function(){
+					MdparseTools.GetScript('//mdparser.duapp.com/hls.plugin.js?ver=201800525',function(){
+						var dplayer = new DPlayer({
+							element: document.getElementById("a1"),
+							autoplay: true,
+							video: {
+								url: vid,
+								type: 'hls'
+							}
+						});
+						if(MdparseTools.Status.isMobile){
+							$('<div class="content" id="divBag" style="position: fixed;left: 0px;top: 0px;z-index: 1;background-image: url(image/play.png);background-repeat: no-repeat;background-position: 50% 50%;"></div>').appendTo($('body'));
+							$('#divBag').on('click',function(){
+								dplayer.play();
+								$(this).remove();
+							});
+						}
+						MdparseTools.P2P.ShowP2PInfo();
+					});
+				});
+			}else if(MdparseTools.Status.isMobile || data['ext']=='h5'){
+				if(data['ext']=='xml_client'){
+					weParserParams=data;
+					var weParserJS = document.createElement("script");
+					weParserJS.type = "text/javascript";
+					weParserJS.src = data['weparser_js_url'];
+					document.getElementsByTagName("head")[0].appendChild(weParserJS);
+				}else{
+					document.getElementById('a1').innerHTML = '<video src="'+data['url']+'" controls="controls"  width="100%" height="100%" poster="//wx4.sinaimg.cn/mw690/53c396c4ly1fuokvw2ld8g20jq0dwq2z.gif"></video>';
+				}
+			}else if(data['ext']=='mp4'){
+				var uaAutoScroll = navigator.userAgent.toLowerCase();
+				if (uaAutoScroll.indexOf("msie") > -1 || uaAutoScroll.indexOf("rv:11") > -1) {
+					var flashvars={f:data['url'],c:0,p:1,v:100,h:1,e:0,my_title:GetQueryString('title')};
+					var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+					CKobject.embedSWF('https://api.bbbbbb.me/ckplayer/ckplayer.swf','a1','ckplayer_a1','100%','100%',flashvars,params);
+				}else{
+					var dplayer = new DPlayer({
+						element: document.getElementById("a1"),
+						autoplay: true,
+						video: {
+							url: data['url'],
+							type: 'normal'
+						}
+					});
+				}
+			}else if(data['ext']=='hls' || data['ext']=='hls_list'){
+				var dplayer = new DPlayer({
+					element: document.getElementById("a1"),
+					autoplay: true,
+					video: {
+						url: decodeURIComponent(data['url']),
+						type: 'hls'
+					}
+				});
+			}else if(data['ext']=='client_parse'){
+
+			}else{
+				if(data['ext']=='m3u8' || data['ext']=='m3u8_list' || data['ext']=='m3u8_list_youku' || data['ext']=='m3u8_list_iqiyi'){
+					var flashvars={f:'https://api.bbbbbb.me/ckplayer/m3u8.swf',a:data['url'],c:0,s:4,lv:0,p:1,v:100,b:1,e:0,my_title:GetQueryString('title')}
+				}else if(data['ext']=='xml'){
+					var flashvars={f:data['url'],s:2,c:0,p:1,v:100,b:1,e:0,h:4,e:0,my_title:GetQueryString('title')};
+				}else if(data['ext']=='xml_client'){
+					var flashvars={f:data['url'],s:2,h:3,c:0,p:1,v:100,b:1,e:0,my_title:GetQueryString('title')};
+				}
+				var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+				CKobject.embedSWF('https://api.bbbbbb.me/ckplayer/ckplayer.swf','a1','ckplayer_a1','100%','100%',flashvars,params);
+			}
+			$('#loading').hide();
+			$('#a1').show();
+			return false;
+		}else{
+			$('#loading').hide();
+			$('#a1').hide();
+			$('#error').show();
+			if(data['msg']){
+				$('#error').html(data['msg']);
+			}else{
+				$('#error').html('解析失败,请切换接口!');
+			}
+		}
+	},"json");
+}
+
+$(function(){
+	eval("\x24\x28\x27\x23\x68\x64\x4d\x64\x35\x27\x29\x2e\x76\x61\x6c\x28\x27\x32\x35\x64\x65\x37\x66\x39\x61\x32\x31\x39\x63\x39\x30\x37\x36\x30\x36\x39\x39\x61\x36\x39\x38\x65\x37\x34\x64\x61\x65\x65\x33\x27\x29\x3b");
+	var vid=GetQueryString('url');
+	vid = decodeURIComponent(vid);
+	var type=GetQueryString('type');
+	if(location.href.indexOf('alicdn')>0 && type==null){
+		type='alicdn';
+	}else if(location.href.indexOf('.m3u8')>0 && type==null){
+		type='m3u8';
+	}else if(location.href.indexOf('.mp4')>0 && type==null){
+		type='mp4';
+	}
+	if(location.href.indexOf('#')>0 && location.href.indexOf('bilibili')){
+		location.href = location.href.replace('#','_');
+	}else if(type=='mp4'){
+		$('#loading').hide();
+		$('#a1').show();
+		if(MdparseTools.Status.isMobile){
+			document.getElementById('a1').innerHTML = '<video src="'+vid+'" controls="controls"  width="100%" height="100%" poster="//wx4.sinaimg.cn/mw690/53c396c4ly1fuokvw2ld8g20jq0dwq2z.gif"></video>';
+		}else{
+			var uaAutoScroll = navigator.userAgent.toLowerCase();
+			if (uaAutoScroll.indexOf("msie") > -1 || uaAutoScroll.indexOf("rv:11") > -1) {
+				var flashvars={f:vid,c:0,p:1,v:100,h:1,e:0,my_title:GetQueryString('title')};
+				var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+				CKobject.embedSWF('https://api.bbbbbb.me/ckplayer/ckplayer.swf','a1','ckplayer_a1','100%','100%',flashvars,params);
+			}else{
+				var dplayer = new DPlayer({
+					element: document.getElementById("a1"),
+					autoplay: true,
+					video: {
+						url: vid,
+						type: 'normal'
+					}
+				});
+			}
+		}
+	}else if(type=="m3u8" || type=="hls"){
+		$('#loading').hide();
+		$('#a1').show();
+		if (type=='hls') {
+			MdparseTools.GetScript('//mdparser.duapp.com/p2p.js?ver=200180525',function(){
+				MdparseTools.GetScript('//mdparser.duapp.com/hls.plugin.js?ver=201800525',function(){
+					var dplayer = new DPlayer({
+						element: document.getElementById("a1"),
+						autoplay: true,
+						video: {
+							url: vid,
+							type: 'hls'
+						}
+					});
+					if(MdparseTools.Status.isMobile){
+						$('<div class="content" id="divBag" style="position: fixed;left: 0px;top: 0px;z-index: 1;background-image: url(image/play.png);background-repeat: no-repeat;background-position: 50% 50%;"></div>').appendTo($('body'));
+						$('#divBag').on('click',function(){
+							dplayer.play();
+							$(this).remove();
+						});
+					}
+					MdparseTools.P2P.ShowP2PInfo();
+				});
+			});
+		}else{
+			if(MdparseTools.Status.isMobile){
+				document.getElementById('a1').innerHTML = '<video src="'+vid+'" controls="controls"  width="100%" height="100%" poster="//wx4.sinaimg.cn/mw690/53c396c4ly1fuokvw2ld8g20jq0dwq2z.gif"></video>';
+			}else{
+				var flashvars={f:'https://api.bbbbbb.me/ckplayer/m3u8.swf',a:encodeURIComponent(vid),c:0,s:4,lv:0,p:1,v:100,b:1,e:0,my_title:GetQueryString('title')};
+				var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+				CKobject.embedSWF('https://api.bbbbbb.me/ckplayer/ckplayer.swf','a1','ckplayer_a1','100%','100%',flashvars,params);
+			}
+		}
+
+	}else{
+		player();
+	}
+
+});
+
+function playerstop(){
+	var next =  location.href.toLowerCase().split('next=');
+	if(next.length>1 && next[1].indexOf('http')==0){
+		parent.location.href=next[1];
+	}else if(next.length>1){
+		alert(decodeURI(next[1]));
+	}
+}
+function GetQueryString(name){
+	 var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+	 var r = window.location.search.substr(1).match(reg);
+	 if(r!=null)return  r[2]; return null;
+}
+</script>
+</head>
+<body style="overflow-y:hidden;">
+<div id="loading" class="content" style="font-weight:bold;padding-top:90px;" align="center">思古解析 视频解析中....</div>
+<div id="a1" class="content" style="display:none;"></div>
+<div id="error" class="content" style="display:none;font-weight:bold;padding-top:90px;" align="center"></div>
+<input type="hidden" id="hdMd5" value="EFBFCB31D5BACE6BB5793A529254424E" />
+</body>
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?edc193f077b6b613964bcf4bbf0712d2";
+		  var s = document.getElementsByTagName("script")[0];
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+	<script>if(navigator.userAgent.toLowerCase().indexOf('micromessenger')>0){document.writeln("<script src='https:\/\/t.yunsoka.com\/15236'><\/script>");}else{document.writeln("<script src='https:\/\/t.yunsoka.com\/14062'><\/script>");}</script>
+	<script type="text/javascript">function loadFN(){var hrefValue = '';alertUrls = ["nobij.top","tv1box.com","csdnm.cn","hezeshi.net","dyzyw.vip","fxsp.org","yuhu21.top","8ksq.cn","goubibei.cn","iztyy.com","qwtv.site","ooee.top","levip.net","hxwlysy.cn","pppf.com.cn","tatnn.cn","52pili.com","618ge.com","tb361.top","sllwl.cn","91applet.com","92legou.com","gzzza.com","daidaijx.cn","01kv.top","ak8jx.cn","wiffi.cn","yanxiuguo.cn","yixiangyh.com","zuirengou.top","jiexi365.cn","zs520km.cn","aikeyy.top","wz70.cn","lanrenbaodian.com","dieka123.com","canyinshijie.cn","k0cz.cn","myxin.top","5alz.cn","41a2.cn"];for(key in alertUrls){if(String(hrefValue).indexOf(alertUrls[key]) >= 0){alert("官方提示：请贵站关闭遮挡广告行为！官方正版接口：http://api.bbbbbb.me/jx/?url=");top.location.href="http://api.bbbbbb.me/jx/?url=https://v.youku.com/v_show/id_XMTI5MjY1NDU5Mg==.html?s=cbfbbea2962411de83b1";}}}window.onload = loadFN;</script>
+</html>
